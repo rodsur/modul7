@@ -19,17 +19,22 @@ public class opgave2 {
         Customer aCustomer2 = new Customer("Bo",2);
         Customer aCustomer3 = new Customer("Bent",2);
         Customer aCustomer4 = new Customer("Ib",-2);
-        Customer aCustomer5 = new Customer("Umulius",1024);
+        Customer aCustomer5 = new Customer("Bob",3);
+        Customer aCustomer6 = new Customer("Umulius",1024);
         CustomerDatabase customers = new CustomerDatabase();
         customers.addCustomer(aCustomer);
         customers.addCustomer(aCustomer2);
         customers.addCustomer(aCustomer3);
         customers.addCustomer(aCustomer4);
+        customers.addCustomer(aCustomer5);
+        customers.addCustomer(aCustomer6);
         aCustomer.deposit(5);
         aCustomer.withdraw(4);
         System.out.println("Kurt har: " + aCustomer.balance + " penge på sin konto");
         System.out.println(customers.getCustomers()[1]);
         System.out.println(customers.getCustomers()[2]);
+        customers.leakData();
+        customers.respectPrivacy(3);
         customers.leakData();
     }
     
